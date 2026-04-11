@@ -2,7 +2,7 @@ name: NetEase Cloud Music API
 version: "0.1.0"
 slug: netease_cloud_music_api
 description: NetEase Cloud Music API service for Music Assistant.
-url: https://github.com/xiasi0/ha-addon-netease-cloud-music-api
+url: https://github.com/xiasi0/netease-cloud-music-api
 startup: services
 boot: auto
 init: false
