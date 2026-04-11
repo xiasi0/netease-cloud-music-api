@@ -7,8 +7,12 @@ RUN apk add --no-cache nodejs npm git
 
 WORKDIR /opt/netease-api
 
+ENV HUSKY=0 \
+    npm_config_ignore_scripts=1
+
 RUN git clone --depth=1 https://github.com/NeteaseCloudMusicApiEnhanced/api-enhanced.git . \
     && npm install --omit=dev --no-fund --no-audit \
+    && npm config delete ignore-scripts \
     && npm cache clean --force
 
 COPY rootfs /
